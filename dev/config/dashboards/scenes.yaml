@@ -1,0 +1,188 @@
+title: Scene card
+views:
+  - title: Basics
+    path: basics
+    cards:
+      - type: custom:ha-scene-card
+        buttons:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+          - input_boolean.dinner_scene
+          - input_boolean.movie_scene
+          # Missing entity: greyed out with a question mark
+          - input_boolean.does_not_exist
+      - type: entities
+        title: Toggle the scenes here too
+        entities:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+          - input_boolean.dinner_scene
+          - input_boolean.movie_scene
+          - input_boolean.party_scene
+
+  - title: Title
+    path: title
+    cards:
+      - type: custom:ha-scene-card
+        title: Centered title
+        center_title: true
+        buttons:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+          - input_boolean.dinner_scene
+          - input_boolean.movie_scene
+      - type: custom:ha-scene-card
+        title: Left aligned, the default
+        buttons:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+      - type: custom:ha-scene-card
+        title: Without names
+        center_title: true
+        show_name: false
+        buttons:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+          - input_boolean.dinner_scene
+          - input_boolean.movie_scene
+          - input_boolean.party_scene
+      - type: custom:ha-scene-card
+        title: A title without buttons
+
+  - title: Templates
+    path: templates
+    cards:
+      - type: markdown
+        content: >-
+          Secondary texts and templates. Toggle the scenes to see the
+          "On"/"Off" template follow them.
+      - type: custom:ha-scene-card
+        title: Secondary text
+        buttons:
+          - entity: input_boolean.morning_scene
+            secondary: "07:00"
+          - entity: input_boolean.night_scene
+            secondary: "23:00"
+          - input_boolean.dinner_scene
+      - type: custom:ha-scene-card
+        title: Templates
+        buttons:
+          - entity: input_boolean.morning_scene
+            name: "{{ states('sensor.outside_temperature') }} °C"
+            secondary: Outside
+          - entity: input_boolean.night_scene
+            secondary: "{{ 'On' if is_state(entity, 'on') else 'Off' }}"
+          - entity: input_boolean.movie_scene
+            secondary: "{{ states('sensor.outside_humidity') }} %"
+          - entity: input_boolean.dinner_scene
+            name: "{{ '' }}"
+            secondary: Empty name falls back
+
+  - title: Overrides
+    path: overrides
+    cards:
+      - type: markdown
+        content: Names, icons and colors set per button, and for the card.
+      - type: custom:ha-scene-card
+        buttons:
+          - entity: input_boolean.morning_scene
+            name: Wake up
+            icon: mdi:alarm
+            color: orange
+          - entity: input_boolean.night_scene
+            color: indigo
+          - entity: input_boolean.dinner_scene
+            color: purple
+          - entity: input_boolean.movie_scene
+            name: Cinema
+            color: green
+      - type: custom:ha-scene-card
+        title: Left aligned title
+        color: "#e91e63"
+        buttons:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+          - input_boolean.party_scene
+
+  - title: Entities
+    path: entities
+    cards:
+      - type: markdown
+        content: Lights and switches from the demo integration.
+      - type: custom:ha-scene-card
+        buttons:
+          - light.ceiling_lights
+          - light.kitchen_lights
+          - switch.decorative_lights
+          - switch.ac
+      - type: entities
+        entities:
+          - light.ceiling_lights
+          - light.kitchen_lights
+          - switch.decorative_lights
+          - switch.ac
+
+  - title: Actions
+    path: actions
+    cards:
+      - type: markdown
+        content: >-
+          Morning opens more info on hold. Night toggles on double tap only.
+          Dinner has no action and isn't clickable.
+      - type: custom:ha-scene-card
+        buttons:
+          - entity: input_boolean.morning_scene
+            hold_action:
+              action: more-info
+          - entity: input_boolean.night_scene
+            tap_action:
+              action: none
+            double_tap_action:
+              action: toggle
+          - entity: input_boolean.dinner_scene
+            tap_action:
+              action: none
+
+  - title: Many buttons
+    path: many
+    cards:
+      - type: custom:ha-scene-card
+        buttons:
+          - input_boolean.morning_scene
+          - input_boolean.night_scene
+          - input_boolean.dinner_scene
+          - input_boolean.movie_scene
+          - input_boolean.party_scene
+          - light.ceiling_lights
+          - light.kitchen_lights
+          - switch.decorative_lights
+      - type: custom:ha-scene-card
+        buttons:
+          - input_boolean.morning_scene
+      - type: markdown
+        content: An empty card follows, which takes no space.
+      - type: custom:ha-scene-card
+        buttons: []
+
+  - title: Sections
+    path: sections
+    type: sections
+    sections:
+      - type: grid
+        cards:
+          - type: custom:ha-scene-card
+            buttons:
+              - input_boolean.morning_scene
+              - input_boolean.night_scene
+              - input_boolean.dinner_scene
+              - input_boolean.movie_scene
+      - type: grid
+        column_span: 2
+        cards:
+          - type: custom:ha-scene-card
+            buttons:
+              - input_boolean.morning_scene
+              - input_boolean.night_scene
+              - input_boolean.dinner_scene
+              - input_boolean.movie_scene
+              - input_boolean.party_scene
