@@ -233,7 +233,7 @@ yarn watch       # rebuild on changes
 yarn typecheck   # TypeScript
 yarn lint        # ESLint and Prettier
 yarn test        # smoke tests of the built card
-yarn ha:up       # local Home Assistant with test scenes on http://localhost:8123 (needs Docker and a build)
+yarn ha:up       # local Home Assistant with test scenes on http://localhost:8125 (needs Docker and a build)
 ```
 
 The local test environment and the release process are described in [`dev/README.md`](dev/README.md).

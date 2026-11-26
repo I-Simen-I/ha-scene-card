@@ -9,7 +9,7 @@ be released to test a change.
 
 ```bash
 yarn build          # dist/ must exist before the container starts
-yarn ha:up          # start Home Assistant on http://localhost:8123
+yarn ha:up          # start Home Assistant on http://localhost:8125
 yarn watch          # rebuild on every change, then hard refresh the browser
 ```
 
@@ -24,8 +24,8 @@ yarn ha:logs        # follow the Home Assistant log
 yarn ha:down        # stop the container
 ```
 
-The container uses port 8123, so stop other local Home Assistant containers
-first.
+The container uses port 8125, so it can run next to other local Home
+Assistant containers on the default port 8123.
 
 ## Files
 

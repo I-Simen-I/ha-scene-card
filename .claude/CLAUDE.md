@@ -210,7 +210,7 @@ under `site-packages/hass_frontend/`.
 
 ## Test environment (dev/)
 
-- HA at http://localhost:8123, login skipped from localhost. Dashboard
+- HA at http://localhost:8125, login skipped from localhost. Dashboard
   "Scene card" (`dev/config/dashboards/scenes.yaml`) has a view per area.
 - The compose project is named `ha-scene-card`; without a name, compose
   uses the folder name `dev` and replaces other projects' containers.
