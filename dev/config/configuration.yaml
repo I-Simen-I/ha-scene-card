@@ -1,0 +1,57 @@
+default_config:
+
+# Demo entities, including lights and switches to use as buttons
+demo:
+
+homeassistant:
+  name: HA Scene Card Dev
+  latitude: 59.91
+  longitude: 10.75
+  elevation: 20
+  unit_system: metric
+  time_zone: Europe/Oslo
+  auth_providers:
+    # Skip the login screen when opened locally
+    - type: trusted_networks
+      trusted_networks:
+        - 127.0.0.1
+        - ::1
+        - 172.16.0.0/12
+        - 192.168.0.0/16
+      allow_bypass_login: true
+    - type: homeassistant
+
+# Scenes with a state: a button is active while its entity is on
+input_boolean:
+  morning_scene:
+    name: Morning
+    icon: mdi:weather-sunset-up
+  night_scene:
+    name: Night
+    icon: mdi:weather-night
+    initial: true
+  dinner_scene:
+    name: Dinner
+    icon: mdi:silverware-fork-knife
+  movie_scene:
+    name: Movie
+    icon: mdi:movie-open
+  party_scene:
+    name: A party scene with a very long name
+    icon: mdi:party-popper
+
+frontend:
+  extra_module_url:
+    - /local/dev-loader.js
+
+lovelace:
+  dashboards:
+    dev-scenes:
+      mode: yaml
+      title: Scene card
+      icon: mdi:palette
+      show_in_sidebar: true
+      filename: dashboards/scenes.yaml
+
+logger:
+  default: warning

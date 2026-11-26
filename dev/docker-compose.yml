@@ -1,0 +1,17 @@
+# A unique project name, so this doesn't replace containers of other
+# projects whose compose file is also in a folder called dev/
+name: ha-scene-card
+
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: ha-scene-card-ha
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    environment:
+      TZ: Europe/Oslo
+    volumes:
+      - ./config:/config
+      # The built card, loaded through `frontend.extra_module_url`
+      - ../dist:/config/www/ha-scene-card:ro

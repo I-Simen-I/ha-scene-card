@@ -1,0 +1,17 @@
+/node_modules/
+/dist/
+package-lock.json
+.yarn/cache
+.yarn/install-state.gz
+.DS_Store
+._*
+.idea/
+.claude/rules/personal.md
+.claude/settings.local.json
+# Local Home Assistant test environment
+/dev/config/*
+!/dev/config/configuration.yaml
+!/dev/config/dashboards/
+!/dev/config/www/
+/dev/config/www/*
+!/dev/config/www/dev-loader.js
