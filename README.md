@@ -240,6 +240,11 @@ The local test environment and the release process are described in [`dev/README
 
 Built with TypeScript, Lit 3 and webpack.
 
+## More cards
+
+- [Simple Weather Card](https://github.com/I-Simen-I/simple-weather-card): a minimalistic weather card with a forecast, day and night icons and a visual editor.
+- [Stack In Card](https://github.com/I-Simen-I/stack-in-card): group several cards into one card, without the borders, shadows and gaps between them. Stack them vertically or horizontally, nested stacks included.
+
 ## License
 
 [MIT](LICENSE)
