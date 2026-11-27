@@ -209,6 +209,8 @@ under `site-packages/hass_frontend/`.
 - From HA 2026.11, HACS is built in as the **Marketplace** (still reads
   `hacs.json`, category `plugin`). The card supports HA 2026.4+, so docs
   mention both.
+- The card is in HACS's default list (hacs/default#15005), so users find it
+  by searching; it doesn't need to be added as a custom repository.
 
 ## Test environment (dev/)
 
