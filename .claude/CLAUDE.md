@@ -108,6 +108,8 @@ Use these instead of doing the steps by hand; they hold the details.
   `double_tap_action`.
 - Buttons are flat ovals (no border or shadow, fully round ends), with as
   much space beside the icon as above it (9px with names, 6px without).
+  Below the text: 17px with names (the owner chose it over 27px), 22px
+  without.
   An `aspect-ratio` to keep wide buttons taller than wide was tried and
   rejected.
 - `name` (the primary text, kept from HA's naming) and `secondary` can be

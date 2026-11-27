@@ -51,7 +51,7 @@ export const buttonStyles = css`
     height: 100%;
     box-sizing: border-box;
     /* Fully round ends, and as much space beside the icon as above it */
-    padding: 9px 9px 27px;
+    padding: 9px 9px 17px;
     border-radius: 999px;
     background: color-mix(in srgb, var(--primary-text-color) 5%, transparent);
     color: var(--primary-text-color);
