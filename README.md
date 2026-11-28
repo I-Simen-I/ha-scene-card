@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/I-Simen-I/ha-scene-card?style=for-the-badge)](https://github.com/I-Simen-I/ha-scene-card/releases/latest)
 [![Last commit](https://img.shields.io/github/last-commit/I-Simen-I/ha-scene-card?style=for-the-badge)](https://github.com/I-Simen-I/ha-scene-card/commits/main)
-[![Marketplace](https://img.shields.io/badge/Marketplace%20%2F%20HACS-Custom-orange.svg?style=for-the-badge)](#marketplace-recommended)
+[![Marketplace](https://img.shields.io/badge/Marketplace%20%2F%20HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
 A beautiful and simple way to show which scenes are active on your [Home Assistant](https://www.home-assistant.io/) dashboards: a row of buttons, with the active scene in color. It works just as well for other things that turn on and off, like switches, lights and helpers.
 
@@ -30,7 +30,7 @@ From Home Assistant 2026.11, HACS is built in as the **Marketplace** (Settings â
 
 [![Open your Home Assistant instance and open this repository in the Marketplace.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=I-Simen-I&repository=ha-scene-card&category=plugin)
 
-1. Click the button above, or add `https://github.com/I-Simen-I/ha-scene-card` as a custom repository of type **Dashboard**. In the Marketplace, adding custom repositories needs a connection to GitHub.
+1. Click the button above, or search for **HA Scene Card** in the Marketplace.
 2. Download **HA Scene Card**.
 3. Reload your browser.
 
